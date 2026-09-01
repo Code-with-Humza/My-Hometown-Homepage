@@ -53,7 +53,6 @@ It focuses on:
 
 ## 📂 Project Structure
 
-
 Hometown-Homepage/
 │
 ├── index.html
@@ -65,7 +64,6 @@ Hometown-Homepage/
 ├── myPicture.jpeg
 ├── myCity.png
 └── README.md
-
 
 ## 💻 How to Run
 
@@ -80,10 +78,3 @@ No additional dependencies or installation are required.
 **Hamza Saeed**
 
 GitHub: [Code-with-Humza](https://github.com/Code-with-Humza)
-
-
-
-For your GitHub repository description, I'd use:
-
-**Responsive Lahore hometown homepage built with HTML & CSS featuring famous landmarks, a local guide, and an interactive 3D flip card.**
-
