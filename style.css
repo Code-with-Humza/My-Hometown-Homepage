@@ -1,0 +1,710 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+/* Hero */
+
+.city-image-div {
+    width: 100%;
+    height: 55vh;
+}
+
+.city-image-container {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("myCity.jpg");
+
+    height: 100%;
+    width: 100%;
+
+    background-position: center;
+    background-size: 100% 145%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-name {
+    color: white;
+
+    font-size: 38px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.6);
+
+    margin-top: -20px;
+
+    background-color: rgba(127, 124, 131, 0.22);
+
+    padding: 17px 23px;
+
+    border-radius: 8px;
+
+    border: 1.5px solid rgba(255, 247, 247, 0.6);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.city-name:hover {
+    transform: scale(1.05);
+}
+
+.city-details {
+    color: #ffffff;
+
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    text-shadow:
+        1px 2px 5px rgba(6, 3, 3, 0.6);
+
+    line-height: 1.4;
+
+    margin-top: 50px;
+
+    background-color: rgba(168, 49, 49, 0.55);
+
+    width: 470px;
+
+    text-align: center;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    letter-spacing: 1.2px;
+    word-spacing: 1.5px;
+
+    box-shadow:
+        1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Places */
+
+.activities {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 22px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-weight: bold;
+
+    word-spacing: 2px;
+}
+
+.all-places-container {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-around;
+
+    margin-top: 30px;
+
+    background-color: rgba(5, 40, 117, 0.1);
+
+    padding: 50px 20px;
+}
+
+.places-container {
+    text-align: center;
+}
+
+.mos-class {
+    height: 170px;
+    width: 170px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+
+    margin-left: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.mos-class:hover {
+    transform: scale(1.05);
+}
+
+.place-information {
+    width: 220px;
+}
+
+.place-name {
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+    font-size: 17px;
+}
+
+.place-details {
+    margin-left: 22px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    color: rgb(96, 96, 96);
+
+    word-spacing: 1.3px;
+    line-height: 1.3;
+}
+
+
+/* Profile Card */
+
+.profile-card-container {
+    width: 40%;
+
+    margin: 50px auto 0;
+
+    padding-bottom: 100px;
+
+    perspective: 1200px;
+}
+
+.profile-card {
+    width: 100%;
+    height: 250px;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.8s ease;
+}
+
+.profile-card-container:hover .profile-card {
+    transform: rotateY(180deg);
+}
+
+.profile-card-inner {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+}
+
+
+/* Card Front and Back */
+
+.profile-card-front,
+.profile-card-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    border-radius: 16px;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Front */
+
+.profile-card-front {
+    display: flex;
+
+    flex-direction: row;
+
+    background-color: rgb(228, 193, 193);
+
+    border-bottom: 4px solid rgba(165, 158, 158, 0.5);
+
+    padding: 10px;
+}
+
+.my-profile-picture {
+    height: 210px;
+    width: 150px;
+
+    object-fit: cover;
+
+    margin-top: 20px;
+    margin-left: 20px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.another-flex {
+    flex: 1;
+}
+
+.person-info {
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    padding-top: 20px;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+.guide-details {
+    margin-top: 15px;
+
+    width: 80%;
+
+    margin-left: 50px;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.3px;
+}
+
+.guide-name {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-weight: bold;
+
+    font-style: italic;
+}
+
+
+/* Back */
+
+.profile-card-back {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(85, 249, 206, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(255, 255, 255, 0.06),
+            transparent 35%
+        ),
+        #273542;
+
+    transform: rotateY(180deg);
+}
+
+.back-content {
+    width: 100%;
+
+    max-width: 500px;
+
+    text-align: center;
+}
+
+.contact-heading {
+    color: #55F9CE;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin-bottom: 4px;
+}
+
+.contact-subheading {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.contact-item {
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 12px;
+
+    text-align: left;
+
+    background-color: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+
+    background-color: rgba(85, 249, 206, 0.1);
+
+    border-color: rgba(85, 249, 206, 0.35);
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #55F9CE;
+
+    background-color: rgba(85, 249, 206, 0.1);
+
+    border-radius: 50%;
+
+    font-size: 15px;
+}
+
+.contact-item > div {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.contact-label {
+    color: rgba(255, 255, 255, 0.45);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+.contact-item a,
+.contact-item div > span:last-child {
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    word-break: break-word;
+}
+
+.contact-item a:hover {
+    color: #55F9CE;
+}
+
+.flip-message {
+    color: rgba(255, 255, 255, 0.4);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-style: italic;
+
+    margin-top: 15px;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .profile-card-container {
+        width: 60%;
+    }
+
+    .all-places-container {
+        gap: 20px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .city-image-div {
+        height: 55vh;
+    }
+
+    .city-name {
+        font-size: 30px;
+
+        padding: 15px 18px;
+
+        text-align: center;
+    }
+
+    .city-details {
+        width: 75%;
+
+        font-size: 16px;
+
+        padding: 13px 15px;
+
+        margin-top: 35px;
+    }
+
+
+    .all-places-container {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 45px;
+
+        padding: 45px 20px;
+    }
+
+    .places-container {
+        width: 100%;
+    }
+
+    .place-information {
+        width: 100%;
+    }
+
+    .place-details {
+        max-width: 300px;
+
+        margin: auto;
+    }
+
+    .place-name {
+        margin-left: 0;
+    }
+
+
+    .profile-card-container {
+        width: 90%;
+
+        margin-top: 40px;
+
+        padding-bottom: 120px;
+    }
+
+    .profile-card {
+        height: 500px;
+    }
+
+    .profile-card-front {
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        padding: 20px;
+    }
+
+    .my-profile-picture {
+        width: 120px;
+        height: 160px;
+
+        margin: 0;
+    }
+
+    .another-flex {
+        width: 100%;
+    }
+
+    .person-info {
+        padding-top: 5px;
+
+        font-size: 17px;
+    }
+
+    .guide-details {
+        width: 90%;
+
+        margin: 12px auto 0;
+
+        font-size: 13px;
+
+        text-align: center;
+    }
+
+    .guide-name {
+        margin-top: 12px;
+    }
+
+
+    .profile-card-back {
+        padding: 20px 15px;
+    }
+
+    .contact-heading {
+        font-size: 22px;
+    }
+
+    .contact-details {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .contact-item {
+        min-height: 42px;
+
+        padding: 7px 10px;
+    }
+
+    .contact-icon {
+        width: 29px;
+        height: 29px;
+
+        font-size: 13px;
+    }
+
+    .contact-item a,
+    .contact-item div > span:last-child {
+        font-size: 11px;
+    }
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 400px) {
+
+    .city-name {
+        font-size: 25px;
+    }
+
+    .city-details {
+        width: 80%;
+
+        font-size: 14px;
+    }
+
+    .activities {
+        font-size: 19px;
+    }
+
+    .mos-class {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-card {
+        height: 520px;
+    }
+
+    .profile-card-container {
+        padding-bottom: 130px;
+    }
+
+    .contact-details {
+        gap: 7px;
+    }
+}
+
